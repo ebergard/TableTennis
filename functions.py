@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import os
 import random
 import re
 import smtplib
@@ -341,8 +342,7 @@ def generate_schedule(games):
             for game in day.games:
                 schedule += str(game) + "\n"
             schedule += "\n"
-        print schedule
-
+        print(schedule)
         with open(os.path.join(LOG_FOLDER, 'schedule'), 'w') as fp:
             fp.write(schedule)
 

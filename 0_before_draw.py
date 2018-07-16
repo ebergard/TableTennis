@@ -3,7 +3,7 @@
 # 1. shedule with ids
 # 2. pickled data
 
-import cPickle as pickle
+import pickle
 from functions import *
 import os
 from classes import DataBase
@@ -24,9 +24,9 @@ while not schedule_ready:
     games, games_per_player, participants = generate_games()
     schedule_ready, max_games_per_day, days = generate_schedule(games)
 
-print "Games number = " + str(len(games))
-print "Games per person = " + str(games_per_player)
-print "Maximum number of games per day = " + str(max_games_per_day)
+print("Games number = " + str(len(games)))
+print("Games per person = " + str(games_per_player))
+print("Maximum number of games per day = " + str(max_games_per_day))
 write_games_to_xl(participants)
 
 if not SINGLE:
