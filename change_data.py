@@ -10,8 +10,8 @@ with open(os.path.join(LOG_FOLDER, "data-pickled"), "rb") as fp:
 # change something
 for p in db.participants:
     if p.id == 26:
-        p.name = u"Соколов Лев"
-        p.email = "lsokolov@appliedtech.ru"
+        p.name = u"Тест1"
+        p.email = "test"
         break
 
 with open(os.path.join(LOG_FOLDER, "data-pickled"), "wb") as fp:
